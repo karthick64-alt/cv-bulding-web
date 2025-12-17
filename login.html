@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in – CV Studio</title>
+    <meta
+      name="description"
+      content="Sign in to CV Studio to continue editing your modern, ATS-friendly CV."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              display: ['Poppins', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                200: '#bfdbfe',
+                500: '#2563eb',
+                600: '#1d4ed8',
+                700: '#1e40af',
+              },
+              ink: {
+                900: '#081024',
+                700: '#1f2933',
+                500: '#4b5563',
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: radial-gradient(circle at top left, #eff6ff 0, #f9fafb 42%, #f3f4f6 100%);
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+  </head>
+  <body class="min-h-full text-ink-900">
+    <div class="min-h-screen flex flex-col">
+      <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <div
+              class="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-primary-600 to-sky-400 shadow-md"
+            >
+              <span class="font-display text-lg font-semibold text-white tracking-tight">CV</span>
+            </div>
+            <div class="leading-tight">
+              <a href="index.html" class="font-display text-base font-semibold text-ink-900">
+                CV Studio
+              </a>
+              <p class="text-xs text-ink-500">
+                Build a world‑class CV in minutes
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 text-xs">
+            <a
+              href="register.html"
+              class="inline-flex items-center rounded-full border border-slate-200 px-3 py-1.5 font-medium text-ink-700 hover:bg-slate-50 transition-colors"
+            >
+              Create account
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-1 flex items-center justify-center px-4 py-10">
+        <div
+          class="glass-panel w-full max-w-md rounded-2xl border border-slate-200/80 px-6 py-7 shadow-2xl shadow-slate-900/10"
+        >
+          <div class="mb-5">
+            <p class="text-[11px] font-medium text-primary-700 tracking-[0.16em] uppercase">
+              Welcome back
+            </p>
+            <h1
+              class="mt-1 font-display text-2xl sm:text-3xl font-semibold tracking-tight text-ink-900"
+            >
+              Sign in to your workspace
+            </h1>
+            <p class="mt-2 text-[13px] text-ink-500">
+              Continue editing your CV, switch templates, and export as many versions as you need.
+            </p>
+          </div>
+
+          <form class="space-y-4 text-sm" onsubmit="event.preventDefault()">
+            <div>
+              <label class="block text-xs font-medium text-ink-700 mb-1.5">
+                Email address
+              </label>
+              <input
+                type="email"
+                required
+                placeholder="you@example.com"
+                class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink-900 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none"
+              />
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label class="block text-xs font-medium text-ink-700">
+                  Password
+                </label>
+                <button
+                  type="button"
+                  class="text-[11px] text-primary-600 hover:text-primary-700"
+                >
+                  Forgot?
+                </button>
+              </div>
+              <input
+                type="password"
+                required
+                placeholder="••••••••"
+                class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-ink-900 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none"
+              />
+            </div>
+
+            <div class="flex items-center justify-between text-xs text-ink-500">
+              <label class="inline-flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  class="h-3 w-3 rounded border-slate-300 text-primary-600 focus:ring-primary-500"
+                />
+                <span>Keep me signed in</span>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="mt-1 inline-flex w-full items-center justify-center rounded-full bg-primary-600 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-primary-600/30 hover:bg-primary-700 transition-colors"
+            >
+              Sign in
+            </button>
+          </form>
+
+          <p class="mt-4 text-[12px] text-ink-500 text-center">
+            Don’t have an account yet?
+            <a href="register.html" class="text-primary-600 font-medium">Create one</a>
+          </p>
+
+          <p class="mt-3 text-[11px] text-ink-400 text-center">
+            This is a front‑end demo only. Connect it to your backend (Firebase, Supabase, etc.) to
+            make authentication live.
+          </p>
+        </div>
+      </main>
+
+      <footer class="border-t border-slate-200/70 bg-white/80 backdrop-blur">
+        <div
+          class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2"
+        >
+          <p class="text-[11px] text-ink-500">
+            © <span id="year"></span> CV Studio. Crafted for modern job seekers.
+          </p>
+          <div class="flex flex-wrap gap-3 text-[11px] text-ink-500">
+            <span>Designed for ATS compatibility</span>
+            <span class="hidden sm:inline text-slate-300">•</span>
+            <span>Best with PDF export</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- AI Chat Widget (shared) -->
+    <button
+      id="ai-chat-toggle"
+      class="fixed bottom-5 right-5 z-40 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-tr from-primary-600 to-sky-400 text-white shadow-lg shadow-primary-600/40 hover:scale-105 active:scale-95 transition-transform"
+      aria-label="Open AI CV assistant"
+    >
+      <span class="text-lg leading-none">✧</span>
+    </button>
+    <div
+      id="ai-chat-panel"
+      class="fixed bottom-20 right-5 z-40 w-80 max-w-[92vw] glass-panel rounded-2xl border border-slate-200/80 shadow-2xl shadow-slate-900/20 p-3 text-[12px] hidden"
+    >
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <div>
+          <p class="text-[11px] font-medium text-primary-700 tracking-[0.16em] uppercase">
+            AI CV assistant
+          </p>
+          <p class="text-[11px] text-ink-500">
+            Need help deciding what to enter? Ask me.
+          </p>
+        </div>
+        <button
+          type="button"
+          id="ai-chat-close"
+          class="h-6 w-6 inline-flex items-center justify-center rounded-full border border-slate-200 text-[11px] text-ink-500 hover:bg-slate-50"
+        >
+          ✕
+        </button>
+      </div>
+      <div
+        id="ai-chat-messages"
+        class="mb-2 max-h-56 overflow-y-auto space-y-2 pr-1"
+      >
+        <div class="flex gap-2">
+          <div
+            class="h-6 w-6 flex-shrink-0 rounded-full bg-gradient-to-tr from-primary-600 to-sky-400 text-[11px] text-white flex items-center justify-center"
+          >
+            CV
+          </div>
+          <div
+            class="rounded-2xl rounded-tl-sm bg-slate-50 px-3 py-2 text-[11px] text-ink-700 shadow-sm border border-slate-200/80"
+          >
+            You can use any email here in the demo. In a real app, this would be connected to your
+            account system.
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-1 mb-2">
+        <button
+          type="button"
+          data-ai-suggest="What should I use as my account email for job applications?"
+          class="px-2 py-1 rounded-full bg-slate-50 border border-slate-200 text-[10px] text-ink-600 hover:bg-slate-100"
+        >
+          Email tips
+        </button>
+        <button
+          type="button"
+          data-ai-suggest="Any advice for a strong password strategy when applying to many jobs?"
+          class="px-2 py-1 rounded-full bg-slate-50 border border-slate-200 text-[10px] text-ink-600 hover:bg-slate-100"
+        >
+          Password tips
+        </button>
+      </div>
+      <form id="ai-chat-form" class="flex items-end gap-2 text-[12px]">
+        <textarea
+          id="ai-chat-input"
+          rows="2"
+          placeholder="Ask anything about signing in or your CV..."
+          class="flex-1 resize-none rounded-xl border border-slate-200 bg-white px-2.5 py-1.5 shadow-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none"
+        ></textarea>
+        <button
+          type="submit"
+          class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary-600 text-white text-[11px] shadow-md shadow-primary-600/40 hover:bg-primary-700"
+        >
+          ➤
+        </button>
+      </form>
+      <p class="mt-1 text-[10px] text-ink-400">
+        Demo only – responses are generated in your browser for copywriting ideas.
+      </p>
+    </div>
+
+    <script>
+      const yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    </script>
+    <script src="chat-widget.js"></script>
+  </body>
+</html>
+
+
